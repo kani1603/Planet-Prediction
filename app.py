@@ -16,7 +16,7 @@ feature_columns = joblib.load("feature_columns.pkl")
 
 @app.route("/", methods=["GET"])
 def home():
-    return render_template("index.html")
+    return {"message": "Backend is working!"}
 
 @app.route("/predict", methods=["POST"])
 def predict():
@@ -50,3 +50,4 @@ def predict():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
